@@ -1,0 +1,23 @@
+function number_format(val, decimals){
+val = parseFloat(val);
+return val.toFixed(decimals);
+}
+
+function Moneyspent (num1, num2, num3) {
+    console.log("You have made purchases of £"+ (num1)+", £"+(num2)+" and £"+(num3)+" today.")
+    console.log("You have spent a total of £"+(num1+num2+num3)+" today.")
+    console.log("Your previous balance was £"+(Bank_balance) )
+    console.log("Your new balance is: £"+number_format(Bank_balance-(num1+num2+num3),2))
+    console.log("Your average spend today was: £"+number_format(((num1+num2+num3)/3), 2)) 
+
+    if (num1> num2 && num1> num3) 
+        console.log ("£"+num1+" was your biggest spend today.")
+    if (num2> num1 && num2> num3)
+    console.log ("£"+num2+" was your biggest spend today.")
+    else console.log ("£"+num3+" was your biggest spend today.")
+    
+
+}
+
+let Bank_balance = 100
+Moneyspent(10.99, 100.77, 95.66);
